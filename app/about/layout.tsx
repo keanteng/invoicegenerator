@@ -11,9 +11,6 @@ export default function DashboardLayout({
 }) {
     return (
         <section>
-            <p>Hello ni hao</p> {/*shared UI here*/}
-            <nav></nav>
-
             {children}
         </section>
     )

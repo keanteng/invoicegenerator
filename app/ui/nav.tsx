@@ -16,9 +16,9 @@ import {
   Stack,
   useColorMode,
   Center,
+  Link,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-
 interface Props {
   children: React.ReactNode
 }
@@ -45,11 +45,12 @@ const NavLink = (props: Props) => {
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>About</Box>
+          <Box><Link href='/about'>About</Link></Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
@@ -92,6 +93,7 @@ export default function Nav() {
           </Flex>
         </Flex>
       </Box>
+
     </>
   )
 }

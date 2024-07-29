@@ -1,6 +1,9 @@
 import Nav from '@/app/ui/nav'
+
 import Footer from './ui/invoice/footer'
+import Logistic from './ui/invoice/logistic'
 import Header from './ui/invoice/header'
+import Data from './ui/invoice/data'
 import { 
   Heading, 
   Flex,
@@ -27,6 +30,8 @@ export default function Page() {
         <Flex m={5} borderWidth='2px' borderRadius='3px'>
           <Box m={2}>
             <Header />
+            <Logistic />
+            <Data />
             <Footer />
           </Box>
         </Flex>
